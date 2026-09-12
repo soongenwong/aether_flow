@@ -11,6 +11,7 @@ from dataclasses import dataclass, replace
 from math import ceil, exp, sqrt
 from time import perf_counter_ns, sleep, time_ns
 from typing import Iterator, Literal
+from protocol import TICK_DTYPE
 
 import numpy as np
 
