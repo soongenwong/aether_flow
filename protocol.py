@@ -1,4 +1,3 @@
-# protocol.py
 import numpy as np
 
 # Total size: 8 * 5 = 40 bytes per tick

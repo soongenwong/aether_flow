@@ -16,6 +16,11 @@ largely assisted by an LLM).
 
 
 
+Manual: protocol.py, verify_layout.py
+Vibecode: market_generator.py
+
+
+
 ┌────────────────────────────────────────────────────────┐
 │               VIBECODE (SEND TO CODEX)                 │
 ├────────────────────────────────────────────────────────┤

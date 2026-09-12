@@ -23,3 +23,11 @@ Day 1: Data Structs & Ingestion  ──>  Day 2: Shared Memory & Ring Buffer
 Day 4: Pandas Analytical API    <──  Day 3: NumPy + Numba Features
 │
 Day 5: Concurrency & Sync        ──>  Day 6: Benchmarks & Profiling  ──>  Day 7: CV Polish
+
+
+
+6. Verification: How You Know You Did It Right
+Run your system on your machine and run this quick check:
+Open your terminal and run htop (or Task Manager).
+You should see multiple Python processes pinning distinct CPU cores at high utilization, with near-flat RAM usage (because memory is pre-allocated and circular, with zero garbage collector churn).
+If your RAM grows continuously, you have an allocation leak. If only one core is pegged, you are stuck in the GIL. If your memory is flat and multiple cores are active, you have successfully built an institutional-grade streaming data engine.
