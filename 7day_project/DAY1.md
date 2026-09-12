@@ -1,6 +1,8 @@
-Day 1: Synthetic Data Generator & Protocol Design (4 Hours)
+## Day 1: Synthetic Data Generator & Protocol Design (4 Hours)
+
 Goal: Create realistic L2 tick and trade streams without needing an active
 live exchange account.
+
 Tasks:
 Define your binary tick structure using a custom NumPy structured dtype:
 TICK_DTYPE = np.dtype([
@@ -10,14 +12,15 @@ TICK_DTYPE = np.dtype([
 ('bid_size', np.float64),
 ('ask_size', np.float64)
 ])
+
 Build a synthetic exchange feed using a Poisson jump process or
 Geometric Brownian Motion that spits out 50,000+ ticks/sec. (Can be
 largely assisted by an LLM).
 
 
 
-Manual: protocol.py, verify_layout.py
-Vibecode: market_generator.py
+### Manual: protocol.py, verify_layout.py
+### Vibecode: market_generator.py
 
 
 
