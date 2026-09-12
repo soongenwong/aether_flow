@@ -1,5 +1,7 @@
 ## Day 2: Shared Memory & Circular Buffer Engine (6 Hours) — [CRITICAL]
 
+Simple description: 
+
 Goal: Enable two completely isolated Python processes to communicate without
 sockets or queues.
 

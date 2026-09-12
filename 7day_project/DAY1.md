@@ -1,5 +1,7 @@
 ## Day 1: Synthetic Data Generator & Protocol Design (4 Hours)
 
+Simple description: 
+
 Goal: Create realistic L2 tick and trade streams without needing an active
 live exchange account.
 
