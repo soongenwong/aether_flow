@@ -16,7 +16,7 @@ multiprocessing.Value or RawArray flag).
 
 
 
-### Manual: ring_buffer.py
+### Manual: ring_buffer.py (must understand every line fully and how the big picture works)
 ### Vibecode: test_ring_buffer.py
 
 ┌────────────────────────────────────────────────────────┐

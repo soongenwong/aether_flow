@@ -21,7 +21,7 @@ largely assisted by an LLM).
 
 
 
-### Manual: protocol.py, verify_layout.py
+### Manual: protocol.py, verify_layout.py (must understand every line fully and how the big picture works)
 ### Vibecode: market_generator.py
 
 
