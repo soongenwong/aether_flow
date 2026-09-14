@@ -48,3 +48,20 @@ multi-process transfer: PASS (1 write_head updates observed)
 write throughput: 47,512,522 ticks/sec
 read throughput:  641,248,023 ticks/sec
 end-to-end observed: 3,535,820 ticks/sec
+
+
+
+## Day 3
+
+Compute live microstructural signals (Order Flow Imbalance, Realized Volatility, EWMA) across a 1,000-tick sliding window in under 5 microseconds without triggering Python’s GIL or garbage collector.
+
+### python test_features.py
+
+correctness:            PASS
+window size:           1,000 ticks
+iterations:            50,000
+mean latency:          4.569 us [PASS]
+p50 latency:           4.500 us
+p90 latency:           4.583 us
+p99 latency:           4.750 us
+calculations/second:    209,575
