@@ -11,3 +11,29 @@ Rolling EWMA.
 
 Verify that Numba compiles cleanly without falling back to object mode
 (nopython=True).
+
+
+
+### Manual:
+### Vibecode: 
+
+
+
+┌────────────────────────────────────────────────────────┐
+│               CAN BE VIBECODED (CODEX)                 │
+├────────────────────────────────────────────────────────┤
+│ • Mathematical formulas for OFI, EWMA, & Volatility    │
+│ • Numerical stability edge cases (div-by-zero, log(0)) │
+│ • Benchmark harness measuring microsecond latencies    │
+└────────────────────────────────────────────────────────┘
+                           │
+                           ▼
+┌────────────────────────────────────────────────────────┐
+│                  MUST CODE MANUALLY                    │
+├────────────────────────────────────────────────────────┤
+│ • Numba signature optimization & `@njit(nogil=True)`   │
+│ • Ring-buffer circular index extraction inside Numba   │
+│ • Ensuring zero object-mode fallback (pure C types)    │
+│ • Passing raw structured arrays or strided views       │
+└────────────────────────────────────────────────────────┘
+
