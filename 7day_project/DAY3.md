@@ -14,8 +14,8 @@ Verify that Numba compiles cleanly without falling back to object mode
 
 
 
-### Manual:
-### Vibecode: 
+### Manual: features.py
+### Vibecode: test_features.py
 
 
 
