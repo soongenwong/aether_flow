@@ -101,3 +101,31 @@ ticks=199,000 | timestamp=2026-09-15 08:57:07 | open=100.095000 high=103.290000 
 [Worker-1 PID 16519] Processed 190 feature windows. Exited.
 [Producer PID 16518] Exited cleanly.
 [Master] Shared memory unlinked. Engine shutdown complete.
+
+
+
+## Day 6
+
+Benchmarked IPC performance to demonstrate a 128.4x throughput speedup over multiprocessing.Queue (8.51M vs. 66k ticks/sec) and profiled a deterministic latency distribution (p50: 4.58 µs, p99: 4.79 µs, 210 ns tail jitter), proving zero garbage collection stalls.
+
+### python benchmark_comparison.py
+
+Generating 100,000 synthetic ticks for head-to-head benchmark...
+
+[1/2] Benchmarking Standard multiprocessing.Queue (Tick-by-Tick Pickle)...
+  Queue Throughput:      66,280 ticks/sec
+
+[2/2] Benchmarking AetherFlow Zero-Copy Shared Memory Streaming...
+  AetherFlow Throughput: 8,509,582 ticks/sec
+
+==================================================
+  AETHERFLOW SPEEDUP: 128.4x FASTER THAN QUEUE
+==================================================
+
+![alt text](image.png)
+
+
+
+## Day 7
+
+
