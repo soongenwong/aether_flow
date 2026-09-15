@@ -65,3 +65,15 @@ p50 latency:           4.500 us
 p90 latency:           4.583 us
 p99 latency:           4.750 us
 calculations/second:    209,575
+
+
+
+## Day 4
+
+Engineered AnalyticsEngine for multi-timeframe OHLCV resampling and rolling cross-asset correlation, converting 50,000 ticks in 6.231 ms with verified price invariants.
+
+### python test_analytics.py
+
+get_ohlcv(50,000 ticks): 6.231 ms [PASS]
+OHLCV correctness: PASS
+correlation correctness: PASS
