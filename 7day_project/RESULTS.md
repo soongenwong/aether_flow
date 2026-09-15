@@ -77,3 +77,27 @@ Engineered AnalyticsEngine for multi-timeframe OHLCV resampling and rolling cros
 get_ohlcv(50,000 ticks): 6.231 ms [PASS]
 OHLCV correctness: PASS
 correlation correctness: PASS
+
+
+
+## Day 5
+
+Orchestrated a multi-process engine streaming 199,000 ticks (~40,000 ticks/sec), evaluating 190 feature windows per worker in parallel, and generating live 1-second OHLCV bars with leak-free shared-memory shutdown.
+
+### python run_pipeline.py
+
+[Master PID 16496] Initializing AetherFlow Engine...
+[Master] All 3 sub-processes spawned successfully.
+
+[Worker-1 PID 16519] Compute engine active.
+[Producer PID 16518] Streaming at target 50,000 ticks/sec...
+[Worker-2 PID 16520] Compute engine active.
+ticks=20,000 | timestamp=2026-09-15 08:57:03 | open=99.985000 high=105.135000 low=94.835000 close=98.830000 volume=1395342.245598 tick_count=10000
+ticks=65,000 | timestamp=2026-09-15 08:57:04 | open=100.040000 high=104.530000 low=97.400000 close=101.990000 volume=1388229.660716 tick_count=10000
+ticks=109,000 | timestamp=2026-09-15 08:57:05 | open=99.935000 high=106.060000 low=98.210000 close=99.135000 volume=1374200.689475 tick_count=10000
+ticks=153,000 | timestamp=2026-09-15 08:57:06 | open=99.950000 high=102.885000 low=94.345000 close=101.105000 volume=1392550.027668 tick_count=10000
+ticks=199,000 | timestamp=2026-09-15 08:57:07 | open=100.095000 high=103.290000 low=95.945000 close=100.455000 volume=1389660.757749 tick_count=10000
+[Worker-2 PID 16520] Processed 190 feature windows. Exited.
+[Worker-1 PID 16519] Processed 190 feature windows. Exited.
+[Producer PID 16518] Exited cleanly.
+[Master] Shared memory unlinked. Engine shutdown complete.

@@ -439,7 +439,7 @@ def _wait_until(deadline_ns: int) -> None:
 
 def generate_batch(
     n_ticks: int,
-    start_price: float,
+    start_price: float = 100.0,
     *,
     config: MarketConfig | None = None,
     tick_size: float | None = None,
