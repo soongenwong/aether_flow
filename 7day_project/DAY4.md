@@ -14,7 +14,7 @@ compute a rolling dynamic correlation matrix with pd.DataFrame.corr().
 
 
 ### Manual: analytics.py
-### Vibecode: test_features.py
+### Vibecode: test_analytics.py
 
 
 
